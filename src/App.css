@@ -48,12 +48,15 @@
 
 .body1{
   width: 90%;
+  padding: 0 auto;
   margin: 0 auto;
   padding-top: 40px;
-  background-color: #fcfbf5;
 }
-.comp{
-  padding: 5px;
+
+
+.add{
+  margin: 0 auto;
+  width: fit-content;
 }
 .details{
 
@@ -81,6 +84,7 @@
   }
 }
 
+
 /* Standard syntax */
 @keyframes example {
   from {
@@ -94,6 +98,7 @@
     background-color: rgba(105, 10, 0, 0.5);
   }
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -101,4 +106,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.card{
+
 }
