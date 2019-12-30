@@ -46,20 +46,12 @@
   color:#fff;
 }
 
-/* .body1{
+.body1{
   width: 90%;
   padding: 0 auto;
   margin: 0 auto;
   padding-top: 40px;
-} */
-
-/* .body2{
-  width: fit-content;
-  padding: 0 auto;
-  margin: 0 auto;
-  padding-top: 40px;
-
-} */
+}
 
 
 .add{
@@ -67,13 +59,45 @@
   width: fit-content;
 }
 .details{
-  visibility: hidden;
+
+  opacity: 0;
 }
- .cards:hover .details{
-  visibility: visible;
- }
+.details:hover{
+  background-color: rgba(105, 10, 0, 0.5);
+ 
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.7s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 0.7s;
+  opacity: 1;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  from {
+    /* color: rgba(225, 225, 225, 0); */
+    background-color: rgba(105, 10, 0, 0);
+  }
+  to {
+    /* color: rgba(225, 225, 225, 1); */
+
+    background-color: rgba(105, 10, 0, 0.5);
+  }
+}
 
 
+/* Standard syntax */
+@keyframes example {
+  from {
+    /* color: rgba(225, 225, 225, 0.5); */
+
+    background-color: rgba(105, 10, 0, 0);
+  }
+  to {
+    /* color: rgba(225, 225, 225, 1); */
+
+    background-color: rgba(105, 10, 0, 0.5);
+  }
+}
 
 @keyframes App-logo-spin {
   from {

@@ -36,7 +36,7 @@ export class Projects extends Component {
     <Card.Text className="text-center"> Last updated 3 mins ago</Card.Text>
   </Card.ImgOverlay>
 </Card>
-
+{/* this is  */}
 </Col>)}
 </Row>
             </div>
