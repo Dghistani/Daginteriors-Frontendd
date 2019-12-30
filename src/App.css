@@ -46,14 +46,25 @@
   color:#fff;
 }
 
-.body1{
+/* .body1{
   width: 90%;
+  padding: 0 auto;
   margin: 0 auto;
   padding-top: 40px;
-  background-color: #fcfbf5;
-}
-.comp{
-  padding: 5px;
+} */
+
+/* .body2{
+  width: fit-content;
+  padding: 0 auto;
+  margin: 0 auto;
+  padding-top: 40px;
+
+} */
+
+
+.add{
+  margin: 0 auto;
+  width: fit-content;
 }
 .details{
   visibility: hidden;
@@ -62,6 +73,8 @@
   visibility: visible;
  }
 
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -69,4 +82,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.card{
+
 }

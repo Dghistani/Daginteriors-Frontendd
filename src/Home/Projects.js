@@ -22,7 +22,9 @@ export class Projects extends Component {
   </Card.ImgOverlay>
 </Card>
 <Row style={{padding: '0 10px'}}>
-{this.state.map.map(data=><Col sm={6} style={{padding: '5px'}}>
+{this.state.map.map(data=>
+
+<Col sm={6} style={{padding: '5px'}}>
 <Card className="bg-dark text-white" >
   <Card.Img src="https://placehold.it/1920x1080" alt="Card image" />
   <Card.ImgOverlay className='details'>

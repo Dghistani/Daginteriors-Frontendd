@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CardsForMarbles from '../Cards/CardsForMarbles'
-import { Row} from 'react-bootstrap'
+import { Row, Container} from 'react-bootstrap'
 export default class Marble extends Component {
    
   render() {
@@ -10,16 +10,15 @@ export default class Marble extends Component {
       
       return <CardsForMarbles title={item.title} description={item.description} img={item.img}/>
     })
-    return (
-      <div>
-       
-      <div className = "app">
-        <Row>
+    return (    
+      <div className="body1">
+<Container>
+      <Row>
          {marbles}
          </Row>
-      </div>
-      
-      </div>
+         </Container>
+         </div>      
+    
 
     )
   }
