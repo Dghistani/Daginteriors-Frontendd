@@ -1,3 +1,8 @@
+/* 
+#690a00 red
+#fcfbf5 white
+#d4af37 golden 
+*/
 .App {
   text-align: center;
 }
@@ -27,6 +32,21 @@
 .App-link {
   color: #61dafb;
 }
+#nav{
+  background-color: #690a00;
+
+}
+.logo{
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin:0 30px;
+}
+#white{
+  color:#fff;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
