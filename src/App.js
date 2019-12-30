@@ -8,10 +8,27 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, BrowserRouter, Switch,NavLink} from 'react-router-dom';
 import { Navbar, Nav} from 'react-bootstrap';
+import axios from 'axios'
+
 
 
 
 export default class App extends Component {
+  state={
+    marble:[],
+    img:[],
+  }
+ 
+  ;
+  componentDidMount(){
+    axios.get('http://localhost:5000/add/rocks',{
+     }).then(res =>{
+       console.log(res)
+
+        this.setState({ marble: res.data });
+      })
+    }
+
    clicked = () =>{ 
     console.log('e');
     
@@ -20,30 +37,6 @@ export default class App extends Component {
     return (
 
         <BrowserRouter>
-        
-          {/* <Navbar collapseOnSelect fixed="top" variant="dark" id="nav" >
-          <Navbar.Brand href="#home">
- <span class="logo">DGH</span>
-      {''}
-    </Navbar.Brand>
-
-            <Nav >
-            <NavLink className="nav-link" to="/Home" >Home</NavLink>
-              <NavLink className="nav-link" to="/AboutUs" >About Us</NavLink>
-              <NavLink className="nav-link" to="/ContactUs" >Contact Us</NavLink>
-
-            
-  
-         <Navbar.Toggle />
-  <Navbar.Collapse className="justify-content-end">
-  
-  </Navbar.Collapse>
-
-
-   
-  </Nav>
-  
-          </Navbar> */}
        <Navbar collapseOnSelect expand="lg" id="nav" variant="dark">
   <Navbar.Brand href="#home">DGH</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -66,11 +59,10 @@ export default class App extends Component {
             <Route path="/AboutUs" render={ ()=> <AboutUs />} />
             <Route path="/ContactUs" render={ ()=>  <ContactUs /> } />
             <Route path="/Projects" render={ ()=> <Projects/>} />
-            <Route path="/Marbles" render={ ()=> <Marble/>} />
+            <Route path="/Marbles" render={ ()=> <Marble marbles={this.state.marble}/>} />
             <Route path="/" render={ ()=> <Home/>} />
 
           </Switch>
-
         </BrowserRouter>
     )
   }
