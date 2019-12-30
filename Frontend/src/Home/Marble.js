@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CardsForMarbles from '../Cards/CardsForMarbles'
+import { Row} from 'react-bootstrap'
 export default class Marble extends Component {
    
   render() {
@@ -13,7 +14,9 @@ export default class Marble extends Component {
       <div>
        
       <div className = "app">
+        <Row>
          {marbles}
+         </Row>
       </div>
       
       </div>
