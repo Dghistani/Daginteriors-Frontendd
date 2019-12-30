@@ -46,7 +46,21 @@
   color:#fff;
 }
 
-
+.body1{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 40px;
+  background-color: #fcfbf5;
+}
+.comp{
+  padding: 5px;
+}
+.details{
+  visibility: hidden;
+}
+ .cards:hover .details{
+  visibility: visible;
+ }
 
 @keyframes App-logo-spin {
   from {
