@@ -17,6 +17,7 @@ export default class App extends Component {
   state={
     marble:[],
     img:[],
+    projects:[]
   }
  
   ;
@@ -27,7 +28,18 @@ export default class App extends Component {
 
         this.setState({ marble: res.data });
       })
+      .catch(err => console.log(err))
+
+      axios.get('http://localhost:5000/add/projects',{
+     }).then(res =>{
+       console.log(res)
+
+        this.setState({ projects: res.data });
+      })
+      .catch(err => console.log(err))
+    
     }
+    
 
    clicked = () =>{ 
     console.log('e');
@@ -58,7 +70,7 @@ export default class App extends Component {
           <Switch>
             <Route path="/AboutUs" render={ ()=> <AboutUs />} />
             <Route path="/ContactUs" render={ ()=>  <ContactUs /> } />
-            <Route path="/Projects" render={ ()=> <Projects/>} />
+            <Route path="/Projects" render={ ()=> <Projects projects={this.state.projects} />} />
             <Route path="/Marbles" render={ ()=> <Marble marbles={this.state.marble}/>} />
             <Route path="/" render={ ()=> <Home/>} />
 
