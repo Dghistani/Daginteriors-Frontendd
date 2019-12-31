@@ -10,12 +10,13 @@ export default class ShowCard extends Component {
 
 <button onClick={()=>this.props.clicked(null)} style={{marginTop:'100px', marginLeft:'190px', backgroundColor:'rgba(0,0,0,0)', border:'rgba(0,0,0,0)',color:'rgba(225,225,225,0.5)'}} >X</button>  
 
-<Carousel style={{width:'70%', margin:'auto'}}>
+<Carousel style={{width:'70%', margin:'auto',}}>
                                   {this.props.images.map(img=><Carousel.Item>
     <img
       className="d-block w-100"
       src={img}
       alt="First slide"
+      style={{borderRadius:'5px'}}
     />
 
     <Carousel.Caption>
