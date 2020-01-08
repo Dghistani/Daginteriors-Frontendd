@@ -8,7 +8,7 @@ export default class CardsProjects extends Component {
       
         return (
             <Col sm={6} style={{padding: '5px'}}>
-            <Card className="bg-dark text-white" onClick={()=>this.props.clicked(this.props.data.images)}>
+            <Card className="bg-dark text-white" onClick={()=>this.props.clicked(this.props.data)}>
               <Card.Img src={this.props.data.images[0]} alt="Card image" />
               <Card.ImgOverlay className='details'>
               <Card.Title className="text-center">{this.props.data.title}</Card.Title>
