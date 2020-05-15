@@ -107,6 +107,86 @@
     transform: rotate(360deg);
   }
 }
-.card{
+.popup {  
+  position: fixed;  
+  width: 100%;  
+  height: 100%;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  margin: auto;  
+  background-color: rgba(0,0,0, 0.5);  
+  -webkit-animation-name: popups; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+  animation-name: popups;
+  animation-duration: 0.5s;
+}  
+.popup\_inner {  
+  position: absolute;  
+  left: 25%;  
+  right: 25%;  
+  top: 25%;  
+  bottom: 25%;  
+  margin: auto;  
+  border-radius: 20px;  
+  background: white;  
+}
+.cancel{
+  margin-top:'100px';
+  margin-left:'190px';
+   background-color:none
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes popups {
+  from {
+    /* color: rgba(225, 225, 225, 0); */
+    background-color: rgba(105, 10, 0, 0);
+  }
+  to {
+    /* color: rgba(225, 225, 225, 1); */
 
+    background-color: rgba(105, 10, 0, 0.5);
+  }
+}
+
+
+/* Standard syntax */
+@keyframes popups {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+
+  }
+}
+.projectImages{
+  max-height:300px;
+  max-width:300px;
+  height:auto;
+  width:auto;
+}
+.forms{
+  width:80%;
+  margin: 0 auto;
+  margin-top: 10%;
+  
+}
+.addbtn{
+  margin: 10px 20px 40px 0;
+}
+.forms>.btn{
+  margin-top: 30px;
+}
+.deleting{
+  width: fit-content;
+  margin: 0 auto
+}
+.deleting>.btn{
+  margin: 10px 20px 40px 0;
+}
+.deleting>div{
+  width: fit-content;
+  margin: 0 auto;
 }
